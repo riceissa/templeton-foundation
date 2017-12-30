@@ -7,5 +7,5 @@ var otable = jQuery('#grants-table').dataTable();
 console.log(JSON.stringify(otable.fnGetData()));
 ```
 
-Then right click and "save as" `data.txt`. You want to clean up the typed text
+Then right click and "save as" `data.json`. You want to clean up the typed text
 and prompt and stuff so it's just the JSON.
