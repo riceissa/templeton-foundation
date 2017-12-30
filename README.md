@@ -2,6 +2,9 @@
 
 ## Steps to get the data
 
+This repo already has the required `data.json`, but we describe the steps to
+get this in case we need to get new data.
+
 In Google Chrome, go to <https://templeton.org/grants/grant-database>.
 
 Now open the developer tools with Ctrl-Shift-I, and enter the following two
