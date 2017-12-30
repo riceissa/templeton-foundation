@@ -37,6 +37,9 @@ def main():
 
             soup = BeautifulSoup(title_html, "lxml")
             title = soup.text
+            # FIXME: This is the URL that describes each grant, which is
+            # distinct from the URL for the grants database (which is the same
+            # for all grants).  Do we want to use this url?
             url = soup.find("a")["href"]
 
             soup = BeautifulSoup(project_leaders, "lxml")
@@ -58,7 +61,7 @@ def main():
                 mysql_quote("For project " + title + "; " +
                             "Project leaders: " + project_leaders),  # notes
                 mysql_quote("FIXME"),  # affected_countries
-                mysql_quote(region),  # affected_regions
+                mysql_quote(region),  # affected_regions ; FIXME: the region names are {'USA', 'North America', 'South America', 'Africa', 'Oceania', 'Europe', 'Asia'}. We might want to remap this.
             ]) + ")")
             first = False
         print(";")
