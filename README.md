@@ -5,7 +5,7 @@
 In Google Chrome, go to <https://templeton.org/grants/grant-database>.
 
 Now open the developer tools with Ctrl-Shift-I, and enter the following two
-lines:
+lines in the console:
 
 ```javascript
 var otable = jQuery('#grants-table').dataTable();
