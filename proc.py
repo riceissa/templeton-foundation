@@ -33,6 +33,9 @@ def main():
             (start_year, title_html, project_leaders, grantee, amount,
              funding_area, region) = row
 
+            assert region in {'USA', 'North America', 'South America',
+                              'Africa', 'Oceania', 'Europe', 'Asia'}, region
+
             start_year = int(start_year)
 
             soup = BeautifulSoup(title_html, "lxml")
